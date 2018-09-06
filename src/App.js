@@ -5,13 +5,11 @@ export class App {
     params.set("out", "json");
     params.set("level", "error");
 
-    fetch("http://html5.validator.nu/?" + params.toString())
-      .then(response => {
-        console.log("response");
-        console.log(response);
-      })
-      .catch(error => {
-        console.error(error);
-      });
+    function fetchData(url, data) {
+      return fetch(url).then(response => response.json())
+    }
+    
+    fetchData(`https://html5.validator.nu/?${params.toString()}`)
+      .then(data => console.log(data.messages));
   }
 }

@@ -25,14 +25,13 @@ export class App {
     const appElement = document.getElementById("app");
     let errors = [];
     messages.forEach(message => {
-      console.log(message);
       errors.push(new ErrorItemModel({
           extract: message.extract,
           line: message.lastLine,
           message: message.message
         }));
     });
-    this.errorItemListModel = new ErrorItemListModel((errors = errors));
+    this.errorItemListModel = new ErrorItemListModel(errors = errors);
     const errorItems = this.errorItemListModel.getErrors();
     const errorListElement = this.errorListView.createElement(errorItems);
     render(errorListElement, appElement);

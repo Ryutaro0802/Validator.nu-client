@@ -3,6 +3,7 @@
   "description": "Validator.nu client",
   "version": "1.0",
   "manifest_version": 2,
+  "permissions": ["tabs"],
   "browser_action": {
     "default_popup": "popup.html",
     "default_icon": "hello_extensions.png"

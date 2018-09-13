@@ -1,0 +1,22 @@
+* {
+    margin: 0;
+    padding: 0;
+}
+
+ul, ol {
+    list-style: none;
+}
+
+#app {
+    min-width: 300px;
+    padding: 10px;
+}
+
+.error-list {
+
+}
+
+.error-list > li {
+    border: 1px solid #000;
+    margin-bottom: 10px;
+}

@@ -12,11 +12,12 @@ export class App {
     const fetchData = (url, data) => {
       return fetch(url).then(response => response.json());
     }
+
     chrome.tabs.getSelected(null, tab => {
       const params = new URLSearchParams();
       params.set("doc", tab.url);
       params.set("out", "json");
-      params.set("level", "error");    
+      params.set("level", "error");
       fetchData(`https://html5.validator.nu/?${params.toString()}`)
         .then(data => this.mount(data.messages))
         .catch(error => {

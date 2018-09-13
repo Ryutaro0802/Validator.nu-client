@@ -5,6 +5,7 @@ export class ErrorListView {
   createElement(errorItems) {
     if (errorItems.length) {
       const errorListElement = element`<ul />`;
+      errorListElement.classList.add('error-list');
       errorItems.forEach(errorItem => {
         const errorItemView = new ErrorItemView(errorItem);
         const errorItemElement = errorItemView.createElement(errorItem);

@@ -3,6 +3,7 @@ import { ErrorItemView } from "./ErrorItemView.js";
 
 export class ErrorListView {
   createElement(errorItems) {
+    console.log(errorItems);
     if (errorItems.length) {
       const errorListElement = element`<ul />`;
       errorListElement.classList.add('error-list');

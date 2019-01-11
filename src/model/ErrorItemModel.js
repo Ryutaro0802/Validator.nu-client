@@ -1,8 +1,6 @@
-let index = 0;
-
 export class ErrorItemModel {
-  constructor({ extract, line, message }) {
-    this.id = index++;
+  constructor({ id, extract, line, message }) {
+    this.id = id;
     this.extract = extract;
     this.line = line;
     this.message = message;
